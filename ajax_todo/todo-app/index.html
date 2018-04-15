@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Main academy. Todo app</title>
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="page-header">
+        Todo app
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-xs"
+                data-toggle="modal" data-target="#myModal">
+          Create new todo item
+        </button>
+      </h1>
+
+      <ul class="list-group"></ul>
+    </div>
+  </div>
+</div>
+
+
+<li class="list-group-item template" style="display: none">
+    <h4 class="list-group-item-heading"></h4>
+    <p class="list-group-item-text"><span class="desc"></span>
+        <small><strong></strong></small>
+    </p>
+    <p class="btn-group btn-group-xs">
+        <button class="btn btn-success">Finish</button>
+        <button class="btn btn-default">Unfinished</button>
+        <button class="btn btn-danger">Remove</button>
+    </p>
+</li>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form action="#" id="form_modal">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Create todo form</h4>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="form-group">
+                  <label for="title" class="col-xs-2">Title</label>
+                  <input type="text" id="title"
+                         class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="desc" class="col-xs-2">Desc</label>
+                  <textarea id="desc"
+                            class="form-control" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="finished" class="col-xs-2">Finished</label>
+                  <div class="col-xs-10">
+                    <input type="checkbox" name="finished" id="finished">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
